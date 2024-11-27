@@ -1,4 +1,5 @@
 # Company-access-control-system
+![Screenshot 2024-11-27 185145](https://github.com/user-attachments/assets/c5f0b3a8-11d0-4143-aee7-b254627008d1)
 
 # Employee Project Report Submission System
 The Employee Project Report Submission System is designed to allow employees to submit detailed reports of the projects they have worked on. The system facilitates an organized approach to track and manage project data, allowing employees to upload information about their work in a structured format. The system supports project details such as the project title, description, category, and images associated with the project. The following outlines the roles and functionality of the system:
@@ -32,6 +33,8 @@ Input fields are validated to ensure that the necessary data (like employee name
 The user is prompted to correct any missing or invalid fields.
 
 # Data Submission:
+![image](https://github.com/user-attachments/assets/eae1fa76-5374-4f58-8736-1ca9d15f3f52)
+
 
 Once the employee submits the project report, the information is processed and stored. The admin can later access the report, review the submission, and take further action.
 Roles in the System:
