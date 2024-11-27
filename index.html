@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RBAC: Login & Account Creation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background">
+    <div class="auth-container">
+      <h1>Role-Based Access Control</h1>
+
+      <!-- Toggle Buttons for Login and Account Creation -->
+      <div class="toggle-buttons">
+        <button id="show-login" onclick="showLogin()">Login</button>
+        <button id="show-register" onclick="showRegister()">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="login-form" class="form-section">
+        <h2>Login</h2>
+        <input type="usernsme" id="login-username" placeholder="Enter your username" required>
+        <input type="password" id="login-password" placeholder="Enter your password" required>
+        <button onclick="login()">Login</button>
+      </div>
+
+      <!-- Registration Form -->
+      <div id="register-form" class="form-section hidden">
+        <h2>Create Account</h2>
+        <input type="username" id="register-username" placeholder="Enter your username" required>
+        <input type="password" id="register-password" placeholder="Enter your password" required>
+        <select id="register-role" required>
+          <option value="">Select Role</option>
+          <option value="Admin">Admin</option>
+          <option value="Client">Client</option>
+          <option value="Employee">Employee</option>
+        </select>
+        <button onclick="register()">Create Account</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const users = [];
+
+    // Toggle between Login and Registration forms
+    function showLogin() {
+      document.getElementById("login-form").classList.remove("hidden");
+      document.getElementById("register-form").classList.add("hidden");
+    }
+
+    function showRegister() {
+      document.getElementById("register-form").classList.remove("hidden");
+      document.getElementById("login-form").classList.add("hidden");
+    }
+
+    // Register a new user
+    function register() {
+      const username = document.getElementById("register-username").value;
+      const password = document.getElementById("register-password").value;
+      const role = document.getElementById("register-role").value;
+
+      if (!username || !password || !role) {
+        alert("Please fill in all fields!");
+        return;
+      }
+
+      const existingUser = users.find((user) => user.username === username);
+      if (existingUser) {
+        alert("User already exists!");
+        return;
+      }
+
+      users.push({ username, password, role });
+      alert("Account created successfully!");
+      showLogin();
+    }
+
+    // Login existing user
+    function login() {
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+
+      const user = users.find((user) => user.username === username && user.password === password);
+
+      if (!user) {
+        alert("Invalid username or password!");
+        return;
+      }
+
+      if (user.role === "Admin") window.location.href = "admin.html";
+      if (user.role === "Client") window.location.href = "client.html";
+      if (user.role === "Employee") window.location.href = "employee.html";
+    }
+  </script>
+</body>
+</html>

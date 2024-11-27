@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hexamra Job Board</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Header Styling */
+    .header {
+      background: #f4f4f4;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      color: #007bff;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #007bff;
+    }
+
+    /* Hero Section Styling */
+    .hero {
+      background: url('http://www.madammoney.com/wp-content/uploads/2016/09/Corporate-Building.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+    }
+
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      background: #007bff;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .service-item {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Latest Jobs Section */
+    .latest-jobs {
+      padding: 40px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .latest-jobs h2 {
+      margin-bottom: 20px;
+    }
+
+    .latest-jobs table {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    .latest-jobs table th,
+    .latest-jobs table td {
+      padding: 10px 20px;
+      border: 1px solid #ddd;
+    }
+
+    .latest-jobs table th {
+      background: #007bff;
+      color: white;
+    }
+
+    .latest-jobs table td {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Hexamra</h1>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Find a Job</a></li>
+          <li><a href="#">Post a Job</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="index.html">Login</a></li>
+          <li><a href="index.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Build Your Future</h2>
+      <p>We offer <span>2,989</span> job vacancies right now!</p>
+      <form class="search-bar">
+        <input type="text" placeholder="Job title, skills, or company">
+        <input type="text" placeholder="City or state">
+        <button type="submit">Find Job</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="service-item">Automobile Jobs</div>
+    <div class="service-item">Construction</div>
+    <div class="service-item">Food Service</div>
+    <div class="service-item">Logistics</div>
+    <div class="service-item">Finance</div>
+  </section>
+
+  <!-- Latest Jobs Section -->
+  <section class="latest-jobs">
+    <h2>Latest Jobs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Company</th>
+          <th>Job Vacancy</th>
+          <th>City</th>
+          <th>Salary</th>
+          <th>Employment Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>27/11/2024</td>
+          <td>Hexamra</td>
+          <td>Software Engineer</td>
+          <td>Puducherry</td>
+          <td>$5000</td>
+          <td>Full-Time</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

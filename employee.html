@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Project Report Submission</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://wallpaperaccess.com/full/4321838.jpg')no-repeat center center/cover;
+    }
+
+    /* Header Styling */
+    header {
+      background: #007bff;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    /* Form Container */
+    .form-container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .form-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Form Fields */
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 5px;
+    }
+
+    /* Submit Button */
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      background: #0056b3;
+    }
+
+    /* Logout Button */
+    .logout-btn {
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 18px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .logout-btn:hover {
+      background: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Employee Project Report Submission</h1>
+  </header>
+
+  <!-- Form Container -->
+  <div class="form-container">
+    <h2>Submit Your Project Report</h2>
+    <form action="/submit-report" method="post" enctype="multipart/form-data">
+      <!-- Employee Name -->
+      <div class="form-group">
+        <label for="employee-name">Employee Name</label>
+        <input type="text" id="employee-name" name="employee-name" placeholder="Enter your name" required>
+      </div>
+
+      <!-- Project Title -->
+      <div class="form-group">
+        <label for="project-title">Project Title</label>
+        <input type="text" id="project-title" name="project-title" placeholder="Enter project title" required>
+      </div>
+
+      <!-- Project Description -->
+      <div class="form-group">
+        <label for="project-description">Project Description</label>
+        <textarea id="project-description" name="project-description" placeholder="Describe the project..." required></textarea>
+      </div>
+
+      <!-- Project Category -->
+      <div class="form-group">
+        <label for="project-category">Project Category</label>
+        <select id="project-category" name="project-category" required>
+          <option value="">Select a category</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Design">Design</option>
+          <option value="Research">Research</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Upload Project Images -->
+      <div class="form-group">
+        <label for="project-images">Upload Project Images</label>
+        <input type="file" id="project-images" name="project-images" multiple required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Report</button>
+    </form>
+
+    <!-- Logout Button -->
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <script>
+    // JavaScript function to handle logout
+    function logout() {
+      // Redirecting to the index page (home page)
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
