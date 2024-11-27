@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adstyles.css">
+  <script defer src="admin.js"></script> 
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <h1 class="logo"><b>Hexamra</b></h1>
+    <ul>
+      <li><a href="#" class="active">Dashboard</a></li>
+      <li><a href="#">Customers</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Orders</a></li>
+      <li><a href="#">Inventory</a></li>
+      <li><a href="#">Accounts</a></li>
+      <li><a href="#">Tasks</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header class="navbar">
+      <h1>Dashboard</h1>
+
+
+      <div class="top-bar">
+        <input type="text" placeholder="Search here" class="search-bar">
+          <div class="profile">
+            <img src="https://up.yimg.com/ib/th?id=OIP.-s2xQBsIowKFaw0Lxl8uqAHaHa&pid=Api&rs=1&c=1&qlt=95&w=107&h=107" alt="Profile Picture">
+            <span class="username" id="loggedInUsername">John Doe</span>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+          </div>
+      </div>
+        
+    </header>
+
+    <div class="dashboard-content">
+      <!-- Statistics Cards -->
+      <div class="cards">
+        <div class="card">
+          <h2>54</h2>
+          <p>Customers</p>
+        </div>
+        <div class="card">
+          <h2>79</h2>
+          <p>Projects</p>
+        </div>
+        <div class="card">
+          <h2>124</h2>
+          <p>Orders</p>
+        </div>
+        <div class="card">
+          <h2>$6K</h2>
+          <p>Income</p>
+        </div>
+      </div>
+
+      <!-- Recent Projects Table -->
+      <div class="projects-section">
+        <h2>Recent Projects</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Project Title</th>
+              <th>Department</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>UI/UX Design</td>
+              <td>UI Team</td>
+              <td><span class="status review">Review</span></td>
+            </tr>
+            <tr>
+              <td>Web Development</td>
+              <td>Frontend</td>
+              <td><span class="status in-progress">In Progress</span></td>
+            </tr>
+            <tr>
+              <td>Ushop App</td>
+              <td>Mobile Team</td>
+              <td><span class="status pending">Pending</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Example: Set the username dynamically
+    document.getElementById('username').textContent = localStorage.getItem('loggedInUsername') || 'Admin User';
+  </script>
+</body>
+</html>
